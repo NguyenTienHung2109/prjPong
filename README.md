@@ -43,7 +43,7 @@ II. Mô tả trò chơi
 + Hàm InputMenu() và Menu() lần lượt được dùng để cập nhật trạng thái của bàn phím và xuất ra hình ảnh của Menu trên màn hình game.
 + Hàm Pause() và Win() lần lượt được dùng để cập nhật trạng thái của bàn phím lẫn xuất ra màn hình khi dừng game bằng nút 'P' hoặc khi 1 trong 2 người chơi giành được chiến thắng. 
 
-III.Kết luận: 
+III. Kết luận: 
 - Theo em, Pong có thể được coi là một trò chơi hoàn chỉnh, tuy còn thô sơ và có thể cải thiện ở một số mặt như cài đặt thêm phông nền hay hiệu ứng animation khi dành chiến thắng. Nếu có thể phát triển thêm, em muốn thêm 1 vài tính năng như nhặt item để điều chỉnh tốc độ di chuyển của quả bóng hay khả năng di chuyển của thanh chắn. 
 
 - Điều tâm đắc nhất với em sau khi hoàn thành dự án lớn lần này là cách quản lý code/file trong 1 project sao cho ngăn nắp, hợp lý và khoa học. Tuy lúc khởi đầu em có những sự bối rối nhất định, em dần học được cách tạo khung cho trò chơi rồi thêm vào những tính năng mới, qua đó cải thiện nhiều về tư duy lẫn khả năng viết code của bản thân. 
