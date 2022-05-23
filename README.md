@@ -1,5 +1,5 @@
-Họ và tên: Nguyễn Tiến Hùng
-MSV: 21020541
+- Họ và tên: Nguyễn Tiến Hùng
+- MSV: 21020541
 
 
 I. Hướng dẫn cài đặt:
