@@ -1,12 +1,25 @@
+Họ và tên: Nguyễn Tiến Hùng
+MSV: 21020541
+
+
 I. Hướng dẫn cài đặt:
-- Cài các file cpp, header và folder assets chứa các file wav, mp3 vào trong cùng 1 folder lớn.
-- Tải và cài đặt thêm các phần sdl sau để chương trình hoạt động:
+- Tạo 1 folder lớn để chứa các file cpp và header lẫn folder assets, tên đặt tuỳ ý (tạm gọi là Pong).
+- file main.cpp chứa code chính của dự án, trong đó chứa các chức năng chính để vận hành trò chơi, các file header như ball.h hay keyboard.h để quản lý hình ảnh quả bóng và thanh chắn của cả 2 người chơi,...
+- Folder assets chứa font chữ được sử dụng trong game và các file âm thanh như background và sound effect được sử dụng xuyên suốt. Nếu thiếu folder này thì chương trình sẽ không thể tải được phông chữ và âm thanh.
+- Tải và cài đặt thêm các phần sdl sau vào folder lớn Pong để chương trình hoạt động:
 + SDL2.dll
 + SDL2_mixer.dll
 + SDL2_ttf.dll
-+ SDL2_image.dll
+
+- Các bước cài đặt như sau:
++ Cài các file cpp, header và folder assets chứa các file wav, mp3 vào trong cùng 1 folder lớn, ta đặt tên là Pong.
++ Sau đó, ta cần tải các phần mềm để chạy chương trình trên đó, ví dụ như codeblocks hay visual studio code.
++ Trong phần compiler của IDE, ta thêm dòng "-lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer" vào trong phần "linker setting".
++ Tiếp tục ấn vào nút "Search directory" và thêm các đường dẫn tới các file SDL đã cài ở phần trước; phần compiler dẫn đến mục include của SDL, SDL_TTF, SDL_Mixer, phần linker dẫn đến mục lib của SDL, SDL_TTF, SDL_Mixer.
+
 
 II. Mô tả trò chơi
+
 - Link youtube mô tả trò chơi: https://www.youtube.com/watch?v=npPpVJ8FRhE
 - Trò chơi tên là PONG, là trò chơi bóng bàn 2D dùng thanh chắn để không cho bóng lọt qua nền trái hoặc phải của màn hình. Nếu để bóng lọt qua, đối phương sẽ ghi được điểm.
 - Game được cài chế độ chơi 1 người và 2 người, thêm vào đó là 1 màn hình menu và chức năng pause game.
@@ -17,7 +30,9 @@ II. Mô tả trò chơi
 - Trong chế độ 1 người chơi, người chơi sẽ điều khiển thanh chắn của mình bằng 2 nút 'W' để di chuyển lên và 'S' để di chuyển xuống.
 - Trong chế độ 2 người chơi, người chơi 1 sẽ điều khiển thanh chắn của mình bằng 2 nút 'W' để di chuyển lên và 'S' để di chuyển xuống, còn người chơi 2 sẽ điều khiển thanh chắn của mình bằng 2 nút 'PG UP' để di chuyển lên và 'PG DOWN' để di chuyển xuống.
 - Khi người chơi số 1 dành được 4 điểm, thanh chắn của người chơi số 2 sẽ chuyển sang màu vàng và gia tăng kích thước để dễ dàng che chắn quả bóng hơn, đồng thời màu quả bóng sẽ được chuyển sang màu đỏ. Điều tương tự cũng sẽ xảy ra khi người chơi số 2 đạt được 4 điểm.
+
 - Các kĩ thuật được sử dụng trong phần code: 
+
 + con trỏ: các con trỏ được dùng để chỉ đến các phông chữ để hiển thị các các phím trong menu và pause; các đồ hoạ được chỉ đến là các hình chữ nhật SDL_Rect tạo hình quả bóng hay bàn di chuyển của 2 người chơi; ngoài ra còn chỉ đến Mix_Music (nhạc background) và Mix_Chunk (sound effect).
 + đồ hoạ và âm thanh SDL: Như em đã nói ở trên, project có sử dụng SDL_TTF và SDL_Mixer để viết các ký tự trong game và tạo hiệu ứng âm thanh mỗi khi chuyển đổi trạng thái chọn nút bấm (ví dụ như khi bấm di chuyển con trỏ ở phần menu thì sẽ có sound effect), thêm vào đó là 2 background được chạy xuyên suốt, 1 bài nhạc cho phần menu và 1 bài nhạc cho phần game. 
 + string dùng để cập nhật điểm, ghi chữ và xuất ra màn hình.
@@ -27,5 +42,8 @@ II. Mô tả trò chơi
 + Hàm write() được dùng để xuất ra các dòng kí tự trên màn hình game. Ta có thể tự do điều chỉnh màu, kích thước, vị trí của dòng chữ ta muốn xuất ra màn hình bằng hàm này. 
 + Hàm InputMenu() và Menu() lần lượt được dùng để cập nhật trạng thái của bàn phím và xuất ra hình ảnh của Menu trên màn hình game.
 + Hàm Pause() và Win() lần lượt được dùng để cập nhật trạng thái của bàn phím lẫn xuất ra màn hình khi dừng game bằng nút 'P' hoặc khi 1 trong 2 người chơi giành được chiến thắng. 
-- Kết luận: Theo em, Pong có thể được coi là một trò chơi hoàn chỉnh, tuy còn thô sơ và có thể cải thiện ở một số mặt như cài đặt thêm phông nền hay hiệu ứng animation khi dành chiến thắng. Nếu có thể phát triển thêm, em muốn thêm 1 vài tính năng như nhặt item để điều chỉnh tốc độ di chuyển của quả bóng hay khả năng di chuyển của thanh chắn. 
+
+III.Kết luận: 
+- Theo em, Pong có thể được coi là một trò chơi hoàn chỉnh, tuy còn thô sơ và có thể cải thiện ở một số mặt như cài đặt thêm phông nền hay hiệu ứng animation khi dành chiến thắng. Nếu có thể phát triển thêm, em muốn thêm 1 vài tính năng như nhặt item để điều chỉnh tốc độ di chuyển của quả bóng hay khả năng di chuyển của thanh chắn. 
+
 - Điều tâm đắc nhất với em sau khi hoàn thành dự án lớn lần này là cách quản lý code/file trong 1 project sao cho ngăn nắp, hợp lý và khoa học. Tuy lúc khởi đầu em có những sự bối rối nhất định, em dần học được cách tạo khung cho trò chơi rồi thêm vào những tính năng mới, qua đó cải thiện nhiều về tư duy lẫn khả năng viết code của bản thân. 
