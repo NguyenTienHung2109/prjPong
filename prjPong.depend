@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1651569065 source:d:\code khacs\sdl\pong\main.cpp
+	"keyboard.h"
+	<SDL.h>
+
+1651674662 d:\code khacs\sdl\pong\keyboard.h
+	<SDL.h>
+	"paddle.h"
+	"ball.h"
+	<ctime>
+	<bits/stdc++.h>
+	<SDL_ttf.h>
+	<SDL_image.h>
+	<cmath>
+
+1650559449 d:\code khacs\sdl\pong\paddle.h
+	<SDL.h>
+
+1650464001 d:\code khacs\sdl\pong\ball.h
+	<SDL.h>
+	<bits/stdc++.h>
+

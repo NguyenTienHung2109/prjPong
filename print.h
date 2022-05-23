@@ -14,9 +14,9 @@ void render()
 
     frameCount++;
     timerFPS = SDL_GetTicks()-lastFrame;
-    if(timerFPS<(800/60))
+    if(timerFPS<(1000/60))
     {
-        SDL_Delay((800/60)-timerFPS);
+        SDL_Delay((1000/60)-timerFPS);
     }
 
 
@@ -93,9 +93,9 @@ void Menu()
 
     frameCount++;
     timerFPS = SDL_GetTicks()-lastFrame;
-    if(timerFPS<(800/60))
+    if(timerFPS<(1000/60))
     {
-        SDL_Delay((800/60)-timerFPS);
+        SDL_Delay((1000/60)-timerFPS);
     }
 
     SDL_SetRenderDrawColor(renderer, white.r, white.g, white.b, 255);
